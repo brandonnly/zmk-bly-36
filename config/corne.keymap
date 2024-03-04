@@ -25,8 +25,8 @@
         compatible = "zmk,combos";
 
         caps_lock {
-            bindings = <&caps_word>;
-            key-positions = <13 22>;
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <22>;
             layers = <0>;
         };
     };
@@ -45,27 +45,17 @@
 &trans  &kp Q                       &kp W                  &kp E                     &kp R                 &kp T                               &kp Y                          &kp U                 &kp I                      &kp O                          &kp P                                &trans
 &trans  &homerow_mods LEFT_SHIFT S  &homerow_mods LCTRL S  &homerow_mods LEFT_ALT D  &homerow_mods LGUI F  &homerow_mods LS(LC(LA(LGUI))) G    &homerow_mods LS(LA(RCTRL)) H  &homerow_mods RGUI J  &homerow_mods RIGHT_ALT K  &homerow_mods RIGHT_CONTROL L  &homerow_mods RIGHT_SHIFT SEMICOLON  &trans
 &trans  &kp Z                       &kp X                  &kp C                     &kp V                 &kp B                               &kp N                          &kp M                 &kp COMMA                  &kp DOT                        &kp FSLH                             &trans
-                                                           &kp BACKSPACE             &mo 2                 &kp SPACE                           &kp RET                        &mo 3                 &kp DELETE
+                                                           &kp BACKSPACE             &mo 2                 &kp SPACE                           &kp RET                        &mo 0                 &kp DELETE
             >;
-
-            label = "mac";
         };
 
-        config_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+        windows {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT         &trans                &trans
-&trans  &bt BT_CLR    &trans        &trans        &bt BT_DISC 3  &trans          &trans  &trans          &trans            &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans
-&trans  &trans        &trans        &trans        &trans         &trans          &trans  &trans          &trans            &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans
-                                    &trans        &trans         &trans          &trans  &trans          &trans
+&trans  &trans  &trans                &trans  &trans                        &trans    &trans  &trans                         &trans  &trans                &trans  &trans
+&trans  &trans  &homerow_mods LGUI S  &trans  &homerow_mods LEFT_CONTROL F  &trans    &trans  &homerow_mods RIGHT_CONTROL J  &trans  &homerow_mods RGUI L  &trans  &trans
+&trans  &trans  &trans                &trans  &trans                        &trans    &trans  &trans                         &trans  &trans                &trans  &trans
+                                      &trans  &trans                        &trans    &trans  &trans                         &trans
             >;
-
-            label = "config layer";
         };
 
         num_symbol {
@@ -84,8 +74,34 @@
 &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &trans                  &kp PG_DN               &kp PG_UP             &trans                   &trans  &trans
 &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &kp LEFT                &kp DOWN                &kp UP                &kp RIGHT                &trans  &trans
 &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &kp LA(LG(LEFT_ARROW))  &kp LA(LG(DOWN_ARROW))  &kp LA(LG(UP_ARROW))  &kp LA(LG(RIGHT_ARROW))  &trans  &trans
-                        &trans  &trans  &trans     &trans                  &trans                  &trans
+                        &trans  &trans  &kp TAB    &trans                  &trans                  &trans
             >;
+        };
+
+        config_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT         &trans                &trans
+&trans  &bt BT_CLR    &trans        &trans        &bt BT_DISC 3  &trans          &trans  &trans          &trans            &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans
+&trans  &to 0         &to 1         &trans        &trans         &trans          &trans  &trans          &trans            &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans
+                                    &trans        &trans         &trans          &trans  &trans          &trans
+            >;
+
+            label = "config layer";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        conifg_layer {
+            if-layers = <2 5>;
+            then-layer = <5>;
         };
     };
 };

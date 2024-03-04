@@ -100,7 +100,7 @@
         compatible = "zmk,conditional-layers";
 
         conifg_layer {
-            if-layers = <2 5>;
+            if-layers = <2 3>;
             then-layer = <4>;
         };
     };

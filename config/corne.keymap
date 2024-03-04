@@ -50,13 +50,6 @@
             bindings = <&kp GLOBE &kp F>;
             label = "MACOS_FULLSCREEN";
         };
-
-        mission_control: mission_control {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp UP_ARROW>;
-            label = "MISSION_CONTROL";
-        };
     };
 
     keymap {
@@ -116,11 +109,9 @@
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none  &kp K_PREVIOUS     &kp K_PLAY_PAUSE  &kp K_NEXT         &none                 &none
 &none  &bt BT_CLR    &none         &none         &bt BT_DISC 3  &none           &none  &macos_fullscreen  &none             &kp C_VOL_UP       &kp C_BRIGHTNESS_INC  &none
-&none  &to 0         &to 1         &none         &none          &none           &none  &mission_control   &none             &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none
+&none  &to 0         &to 1         &none         &none          &none           &none  &kp LC(UP_ARROW)   &none             &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none
                                    &none         &none          &none           &none  &none              &none
             >;
-
-            label = "config layer";
         };
     };
 

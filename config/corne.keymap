@@ -43,6 +43,22 @@
         };
     };
 
+    macros {
+        macos_fullscreen: macos_fullscreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GLOBE &kp F>;
+            label = "MACOS_FULLSCREEN";
+        };
+
+        mission_control: mission_control {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp UP_ARROW>;
+            label = "MISSION_CONTROL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -98,10 +114,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT         &trans                &trans
-&trans  &bt BT_CLR    &trans        &trans        &bt BT_DISC 3  &trans          &trans  &trans          &trans            &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans
-&trans  &to 0         &to 1         &trans        &trans         &trans          &trans  &trans          &trans            &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans
-                                    &trans        &trans         &trans          &trans  &trans          &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &trans  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT         &trans                &trans
+&trans  &bt BT_CLR    &trans        &trans        &bt BT_DISC 3  &trans          &trans  &macos_fullscreen  &trans            &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans
+&trans  &to 0         &to 1         &trans        &trans         &trans          &trans  &mission_control   &trans            &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans
+                                    &trans        &trans         &trans          &trans  &trans             &trans
             >;
 
             label = "config layer";

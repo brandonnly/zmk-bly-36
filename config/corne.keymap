@@ -81,10 +81,10 @@
 
         num_symbol {
             bindings = <
-&trans  &kp EXCLAMATION                  &kp AT_SIGN   &kp HASH   &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp SEMI  &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
-&trans  &homerow_mods LEFT_SHIFT DOLLAR  &kp PERCENT   &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp BSLH  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
-&trans  &kp AMPERSAND                    &kp ASTERISK  &kp GRAVE  &kp LBKT              &kp RBKT                 &kp N0    &kp N1  &kp N2  &kp N3  &kp MINUS  &trans
-                                                       &trans     &trans                &trans                   &trans    &trans  &trans
+&trans  &kp EXCLAMATION                  &kp AT_SIGN   &kp HASH   &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp APOSTROPHE  &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
+&trans  &homerow_mods LEFT_SHIFT DOLLAR  &kp PERCENT   &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp BSLH        &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
+&trans  &kp AMPERSAND                    &kp ASTERISK  &kp GRAVE  &kp LBKT              &kp RBKT                 &kp N0          &kp N1  &kp N2  &kp N3  &kp MINUS  &trans
+                                                       &trans     &trans                &trans                   &trans          &trans  &trans
             >;
 
             label = "numbers & symbols";

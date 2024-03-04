@@ -29,6 +29,18 @@
             key-positions = <22>;
             layers = <0>;
         };
+
+        alfred {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <38 39>;
+            layers = <0>;
+        };
+
+        flow_launcher {
+            bindings = <&kp LA(SPACE)>;
+            key-positions = <38 39>;
+            layers = <1>;
+        };
     };
 
     keymap {

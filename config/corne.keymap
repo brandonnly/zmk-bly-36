@@ -101,7 +101,7 @@
 
         conifg_layer {
             if-layers = <2 5>;
-            then-layer = <5>;
+            then-layer = <4>;
         };
     };
 };

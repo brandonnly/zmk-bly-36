@@ -65,6 +65,8 @@
 &trans  &kp Z                       &kp X                  &kp C                     &kp V                 &kp B                               &kp N                          &kp M                 &kp COMMA                  &kp DOT                        &kp FSLH                             &trans
                                                            &kp BACKSPACE             &mo 2                 &kp SPACE                           &kp RET                        &mo 3                 &kp ESCAPE
             >;
+
+            label = "mac";
         };
 
         windows {
@@ -84,7 +86,7 @@
                                                        &trans     &trans                &trans                   &trans          &trans  &trans
             >;
 
-            label = "numbers & symbols";
+            label = "num";
         };
 
         arrow_func {
@@ -94,6 +96,8 @@
 &trans  &trans        &kp F1  &kp F2      &kp F3  &kp F12    &kp LA(LG(LEFT_ARROW))  &kp LA(LG(DOWN_ARROW))  &kp LA(LG(UP_ARROW))  &kp LA(LG(RIGHT_ARROW))  &trans  &trans
                               &kp DELETE  &trans  &kp TAB    &trans                  &trans                  &trans
             >;
+
+            label = "arrow";
         };
 
         config_layer {
@@ -109,6 +113,8 @@
 &none  &to 0         &to 1         &none         &none          &none           &none  &kp LC(UP_ARROW)  &none             &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none
                                    &none         &none          &none           &none  &none             &none
             >;
+
+            label = "config";
         };
     };
 

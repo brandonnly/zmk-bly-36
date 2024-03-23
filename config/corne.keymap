@@ -76,6 +76,8 @@
 &trans  &trans  &trans                &trans  &trans                        &trans    &trans  &trans                         &trans  &trans                &trans  &trans
                                       &trans  &trans                        &trans    &trans  &trans                         &trans
             >;
+
+            label = "windows";
         };
 
         num_symbol {

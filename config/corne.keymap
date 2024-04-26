@@ -102,23 +102,6 @@
             label = "arrow";
         };
 
-        config_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none  &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT         &none                 &none
-&none  &bt BT_CLR    &none         &none         &bt BT_DISC 3  &out OUT_TOG    &none  &none             &none             &kp C_VOL_UP       &kp C_BRIGHTNESS_INC  &none
-&none  &to 0         &to 1         &to 5         &none          &none           &none  &kp LC(UP_ARROW)  &none             &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none
-                                   &none         &none          &none           &none  &none             &none
-            >;
-
-            label = "config";
-        };
-
         gaming {
             bindings = <
 &trans  &kp TAB    &kp Q  &kp W   &kp E   &kp R     &trans  &trans  &trans  &trans  &trans  &trans
@@ -129,6 +112,23 @@
 
             label = "gaming";
         };
+
+        config_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none   &kp C_PREVIOUS    &kp C_PLAY_PAUSE  &kp C_NEXT         &none                 &none
+&none  &bt BT_CLR    &none         &none         &bt BT_DISC 3  &out OUT_TOG    &none   &none             &none             &kp C_VOL_UP       &kp C_BRIGHTNESS_INC  &none
+&none  &to 0         &to 1         &to 4         &none          &none           &none   &kp LC(UP_ARROW)  &none             &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none
+                                   &trans        &trans         &trans          &trans  &trans            &trans
+            >;
+
+            label = "config";
+        };
     };
 
     conditional_layers {
@@ -136,7 +136,7 @@
 
         conifg_layer {
             if-layers = <2 3>;
-            then-layer = <4>;
+            then-layer = <5>;
         };
     };
 };

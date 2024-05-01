@@ -82,10 +82,10 @@
 
         gaming {
             bindings = <
-&trans  &kp TAB    &kp Q  &kp W   &kp E   &kp R     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp A  &kp S   &kp D   &kp F     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X   &kp C   &kp V     &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp TAB    &kp Q  &kp W   &kp E   &kp R     &trans  &trans                 &trans  &trans                &trans  &trans
+&trans  &kp LSHFT  &kp A  &kp S   &kp D   &kp F     &trans  &homerow_mods LCTRL J  &trans  &homerow_mods LGUI L  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X   &kp C   &kp V     &trans  &trans                 &trans  &trans                &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans                 &trans
             >;
 
             label = "gaming";

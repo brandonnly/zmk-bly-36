@@ -1,0 +1,22 @@
+build.yaml
+  s_a54cd5449c89f1::t_ce89de6d35797b 8,12,14
+  s_a54cd5449c89f1::t_418261c6ba72ea 21,23
+config/corne.keymap
+  s_a54cd5449c89f1::t_f6341a1dda6529 16,48,69,80,91,102,113,130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "75e53da970a67894778386c95d261c208faa8aee",
+  "prompts": {},
+  "sessions": {
+    "s_a54cd5449c89f1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e99f8-478e-7dd3-95fa-e9b84176481a",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}

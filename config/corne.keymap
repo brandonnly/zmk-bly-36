@@ -13,7 +13,7 @@
     behaviors {
         homerow_mods: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            display-name = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GLOBE &kp F>;
-            label = "MACOS_FULLSCREEN";
+            display-name = "MACOS_FULLSCREEN";
         };
     };
 
@@ -66,7 +66,7 @@
                                                            &kp BACKSPACE             &mo 3                 &kp SPACE                           &kp RET                        &mo 4                 &kp ESCAPE
             >;
 
-            label = "mac";
+            display-name = "MAC";
         };
 
         windows {
@@ -77,7 +77,7 @@
                                       &trans  &trans                        &trans    &trans  &trans                         &trans
             >;
 
-            label = "windows";
+            display-name = "WIN";
         };
 
         gaming {
@@ -88,7 +88,7 @@
                           &trans  &trans  &trans    &trans  &trans                 &trans
             >;
 
-            label = "gaming";
+            display-name = "GAME";
         };
 
         num_symbol {
@@ -99,7 +99,7 @@
                                                        &trans     &trans                &trans                   &trans          &trans  &trans
             >;
 
-            label = "num";
+            display-name = "NUM";
         };
 
         arrow_func {
@@ -110,7 +110,7 @@
                               &kp DELETE  &trans  &kp TAB    &trans                  &trans                  &trans
             >;
 
-            label = "arrow";
+            display-name = "ARROW";
         };
 
         config_layer {
@@ -127,7 +127,7 @@
                                    &trans        &trans         &trans          &trans      &trans            &trans
             >;
 
-            label = "config";
+            display-name = "CONFIG";
         };
     };
 

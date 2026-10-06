@@ -1,0 +1,33 @@
+docs/zmk-updates-research.md
+  s_8c28d0b9be2f5a::t_eaf3c994586768 5-7
+  s_8c28d0b9be2f5a::t_47a0e71241748c 1-4,8-45
+build.yaml
+  s_8c28d0b9be2f5a::t_1b36a916fb5a2f 23-25,28
+.github/workflows/build.yml
+  s_8c28d0b9be2f5a::t_1b36a916fb5a2f 5
+config/corne.conf
+  s_8c28d0b9be2f5a::t_1b36a916fb5a2f 23-25
+config/corne.keymap
+  s_8c28d0b9be2f5a::t_1b36a916fb5a2f 11,26-52,145-146,150,157-159,164-167
+  s_8c28d0b9be2f5a::t_eaf3c994586768 160-163
+README.md
+  s_8c28d0b9be2f5a::t_b18bc8c42d0f2d 1-70
+config/west.yml
+  s_8c28d0b9be2f5a::t_1b36a916fb5a2f 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9bc18ee3b44192f8f88cbe2426d056e7c49a3e12",
+  "prompts": {},
+  "sessions": {
+    "s_8c28d0b9be2f5a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11342-a098-7332-bcc2-dd16fea03f7d",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}

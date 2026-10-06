@@ -1,0 +1,22 @@
+config/corne.keymap
+  s_8c28d0b9be2f5a::t_07965d1a61f78b 14-17,41,54,64,70,88-91,94-97,105-108,116-119,127-130,138-141,152-155,163-166,182-186
+  s_8c28d0b9be2f5a::t_fe2aa37826d9a8 187
+README.md
+  s_8c28d0b9be2f5a::t_0226dd2705d4a3 16-22,34-37,72-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e1c7774fe4ae4948bc0677778b30495da86b55ca",
+  "prompts": {},
+  "sessions": {
+    "s_8c28d0b9be2f5a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11342-a098-7332-bcc2-dd16fea03f7d",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}

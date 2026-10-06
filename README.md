@@ -13,8 +13,13 @@ and download its `firmware` artifact. Extract the archive, then flash
 controller. Double-tap each controller's reset button to enter its UF2
 bootloader, then copy the matching file to its USB drive.
 
-Flash both halves for this migration. Mouse support changes the Bluetooth HID
-descriptor, so refresh each computer's pairing after flashing: forget the
+For the five-column migration, first unlock your current firmware in Studio
+with CONFIG + A and choose **Restore Stock Settings**. This clears saved
+Studio overrides that use the old position indexes. Then flash both halves.
+The new firmware uses the 36-key, five-column layout by default.
+
+If upgrading from firmware without mouse support, refresh each computer's
+Bluetooth pairing after flashing because the HID descriptor changes: forget the
 keyboard on the computer, select that Bluetooth profile on the keyboard, clear
 it with CONFIG + H, and pair again. This does not require a settings-reset
 firmware. See ZMK's
@@ -26,8 +31,10 @@ The MAC, WIN, GAME, NUM, ARROW, and CONFIG layers retain their original order
 and all previously assigned keys. The home-row modifier behavior keeps its
 200 ms tapping term, 200 ms quick-tap, tap-preferred flavor, and 125 ms prior-idle
 requirement. Existing combos, the fullscreen macro, and the NUM + ARROW
-conditional CONFIG layer are unchanged. The 42 logical positions are retained,
-including the unused outer columns, so key indexes and combos stay stable.
+conditional CONFIG layer keep their behavior. All seven layers now use 36
+positions, with the unused outer columns removed. Both launcher combos use
+positions 32 and 33, the Space and Enter thumbs. The optional positional
+home-row behaviors also use the new indexes.
 
 ## New controls
 
@@ -62,8 +69,9 @@ use balanced hold-tap resolution, opposite-hand and thumb triggers, and
 key uses them; assign them in Studio only if you want to try different home-row
 resolution. Choose the original modifier and tap key when assigning a behavior.
 
-Studio starts with the existing six layers plus MOUSE and the six-column Corne
-physical layout. Keep that layout to preserve the existing position indexes.
+Studio starts with the existing six layers plus MOUSE and offers only the
+five-column Corne physical layout. This keeps Studio, combos, and positional
+behaviors on the same position indexes.
 Once Studio saves a keymap, later source keymap changes take effect only after
 **Restore Stock Settings**, which replaces the saved Studio map with the map
 in the firmware. Timings, combos, macros, and conditional layers still require
